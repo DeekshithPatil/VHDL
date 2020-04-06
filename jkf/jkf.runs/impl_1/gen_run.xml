@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1543322164">
+  <File Type="OPT-DCP" Name="jkf_opt.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="PWROPT-DCP" Name="jkf_pwropt.dcp"/>
+  <File Type="ROUTE-DCP" Name="jkf_routed.dcp"/>
+  <File Type="PA-TCL" Name="jkf.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DRC" Name="jkf_drc_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="jkf_drc_pwropted.rpt"/>
+  <File Type="OPT-HWDEF" Name="jkf.hwdef"/>
+  <File Type="PLACE-DCP" Name="jkf_placed.dcp"/>
+  <File Type="PLACE-IO" Name="jkf_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="jkf_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="jkf_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="jkf_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="jkf_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="jkf_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="jkf_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="jkf_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="jkf_physopt.dcp"/>
+  <File Type="RDI-RDI" Name="jkf.vdi"/>
+  <File Type="PHYSOPT-DRC" Name="jkf_drc_physopted.rpt"/>
+  <File Type="ROUTE-DRC" Name="jkf_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="jkf_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="jkf_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="jkf_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="jkf_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="jkf_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="jkf_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="jkf_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="jkf_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="jkf_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="jkf_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="jkf_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="jkf_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="jkf_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="jkf_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="jkf.bit"/>
+  <File Type="BG-BIN" Name="jkf.bin"/>
+  <File Type="BITSTR-MSK" Name="jkf.msk"/>
+  <File Type="BITSTR-RBT" Name="jkf.rbt"/>
+  <File Type="BITSTR-NKY" Name="jkf.nky"/>
+  <File Type="BITSTR-BMM" Name="jkf_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="jkf.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="jkf.sysdef"/>
+  <File Type="BG-BGN" Name="jkf.bgn"/>
+  <File Type="BG-DRC" Name="jkf.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/jkf.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="jkf"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../Basys3_Master.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+      <Desc>Vivado Implementation Defaults</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

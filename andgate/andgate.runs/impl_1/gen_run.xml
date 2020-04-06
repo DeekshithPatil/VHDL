@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1543079522">
+  <File Type="OPT-DCP" Name="andga_opt.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="PWROPT-DCP" Name="andga_pwropt.dcp"/>
+  <File Type="ROUTE-DCP" Name="andga_routed.dcp"/>
+  <File Type="PA-TCL" Name="andga.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DRC" Name="andga_drc_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="andga_drc_pwropted.rpt"/>
+  <File Type="OPT-HWDEF" Name="andga.hwdef"/>
+  <File Type="PLACE-DCP" Name="andga_placed.dcp"/>
+  <File Type="PLACE-IO" Name="andga_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="andga_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="andga_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="andga_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="andga_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="andga_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="andga_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="andga_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="andga_physopt.dcp"/>
+  <File Type="RDI-RDI" Name="andga.vdi"/>
+  <File Type="PHYSOPT-DRC" Name="andga_drc_physopted.rpt"/>
+  <File Type="ROUTE-DRC" Name="andga_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="andga_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="andga_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="andga_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="andga_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="andga_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="andga_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="andga_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="andga_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="andga_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="andga_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="andga_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="andga_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="andga_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="andga_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="andga.bit"/>
+  <File Type="BG-BIN" Name="andga.bin"/>
+  <File Type="BITSTR-MSK" Name="andga.msk"/>
+  <File Type="BITSTR-RBT" Name="andga.rbt"/>
+  <File Type="BITSTR-NKY" Name="andga.nky"/>
+  <File Type="BITSTR-BMM" Name="andga_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="andga.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="andga.sysdef"/>
+  <File Type="BG-BGN" Name="andga.bgn"/>
+  <File Type="BG-DRC" Name="andga.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/andga.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="andga"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
